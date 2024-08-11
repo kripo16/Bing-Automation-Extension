@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 320px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      color: #333;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #007bff;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+    input[type="number"] {
+      width: calc(100% - 12px);
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+      margin-bottom: 5px;
+    }
+    .hint {
+      font-size: 12px;
+      color: #888;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .status {
+      color: #dc3545;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .search-info {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+      display: none; /* Initially hidden */
+    }
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Bing Search Automation</h2>
+
+  <label for="times">Number of Searches:</label>
+  <input type="number" id="times" min="1" value="5">
+
+  <label for="delay">Delay (seconds):</label>
+  <input type="number" id="delay" min="1" value="5">
+  <p class="hint">If points are not being counted, increase the delay<br>(5 - 7) seconds recommended.</p>
+
+  <button id="start">Start</button>
+  <p id="status" class="status"></p>
+  <p id="search-info" class="search-info">Searches Left: <span id="search-left">5</span> / <span id="search-total">5</span></p>
+
+  <div class="footer">
+    IMAD ;)
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
